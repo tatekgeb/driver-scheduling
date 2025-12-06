@@ -1,2 +1,2 @@
-web: cd api && python3 app.py
+web: bash start.sh
 
