@@ -13,7 +13,8 @@ from functools import wraps
 import sys
 
 # Add project root to path
-sys.path.insert(0, str(Path(__file__).parent.parent))
+PROJECT_ROOT = Path(__file__).parent.parent
+sys.path.insert(0, str(PROJECT_ROOT))
 
 from main import SchedulingSystem
 from shared.types.models import Driver, Address, TripStatus
@@ -25,7 +26,11 @@ app = Flask(__name__)
 app.secret_key = os.environ.get('SECRET_KEY', 'dev-secret-key-change-in-production')
 CORS(app, supports_credentials=True)
 
-# Initialize system
+# Change working directory to project root to ensure all relative paths work correctly
+import os
+os.chdir(PROJECT_ROOT)
+
+# Initialize system (all paths will now resolve relative to project root)
 scheduling_system = SchedulingSystem()
 trip_storage = TripStorage()
 schedule_manager = ScheduleManager()
@@ -185,7 +190,7 @@ def import_csv():
         return jsonify({'error': 'Service date required'}), 400
     
     # Save uploaded file temporarily
-    upload_path = Path('data/uploads')
+    upload_path = PROJECT_ROOT / 'data' / 'uploads'
     upload_path.mkdir(parents=True, exist_ok=True)
     file_path = upload_path / file.filename
     file.save(str(file_path))
@@ -272,7 +277,7 @@ def list_schedules():
         return jsonify({'error': 'Service date required'}), 400
     
     # Find all schedule files for this date
-    schedules_dir = Path('data/schedules')
+    schedules_dir = PROJECT_ROOT / 'data' / 'schedules'
     schedules = []
     
     for schedule_file in schedules_dir.glob('*.json'):
@@ -335,7 +340,7 @@ def export_schedule(schedule_id):
     if not schedule:
         return jsonify({'error': 'Schedule not found'}), 404
     
-    output_path = Path('data/exports') / f"schedule_{schedule_id}.csv"
+    output_path = PROJECT_ROOT / 'data' / 'exports' / f"schedule_{schedule_id}.csv"
     output_path.parent.mkdir(parents=True, exist_ok=True)
     
     schedule_manager.export_to_csv(schedule, str(output_path))
@@ -352,7 +357,7 @@ def export_schedule(schedule_id):
 @app.route('/<path:path>')
 def serve_react_app(path):
     """Serve React app"""
-    dist_path = Path('desktop/dist')
+    dist_path = PROJECT_ROOT / 'desktop' / 'dist'
     
     # Serve static files
     if path and not path.startswith('api'):
@@ -368,6 +373,7 @@ def serve_react_app(path):
     return jsonify({'error': 'Frontend not built. Run: cd desktop && npm run build:react'}), 404
 
 if __name__ == '__main__':
+    # Working directory should already be set to PROJECT_ROOT above
     port = int(os.environ.get('PORT', 5000))
     # In production, use a proper WSGI server
     if os.environ.get('RAILWAY_ENVIRONMENT'):
