@@ -7,6 +7,6 @@ python3 -m pip install --upgrade pip
 python3 -m pip install -r requirements.txt
 
 echo "Starting Flask application from project root..."
-# Run from project root to ensure relative paths work correctly
+# Change to script directory (project root) to ensure relative paths work correctly
 cd "$(dirname "$0")"
-python3 -m api.app
+python3 api/app.py
