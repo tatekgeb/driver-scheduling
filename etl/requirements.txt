@@ -1,0 +1,10 @@
+# ETL Processing Dependencies
+# Latest stable versions as of December 2024
+pandas>=2.2.3
+numpy>=2.1.0
+
+# API and HTTP requests
+requests>=2.31.0
+
+# Add more dependencies as requirements are defined
+

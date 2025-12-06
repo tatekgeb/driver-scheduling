@@ -1,0 +1,16 @@
+[phases.setup]
+nixPkgs = ["nodejs-18_x", "python312"]
+
+[phases.install]
+cmds = [
+  "cd desktop && npm install",
+  "cd desktop && npm run build:react",
+  "pip install -r api/requirements.txt"
+]
+
+[phases.build]
+cmds = ["echo 'Build complete'"]
+
+[start]
+cmd = "cd api && python app.py"
+

@@ -1,0 +1,33 @@
+{
+  "mapping_api": {
+    "provider": "google",
+    "api_key": "AIzaSyB7eQzhHTBo7jxUyiWwL_SdfGi0XI5VSfQ",
+    "use_traffic": true,
+    "traffic_time_granularity_minutes": 15,
+    "cache_geocoding": true,
+    "cache_duration_days": 30
+  },
+  "optimization": {
+    "weight_travel_time": 1.0,
+    "weight_travel_distance": 0.5,
+    "weight_load_balancing": 0.3,
+    "weight_geographic_proximity": 0.2,
+    "default_arrival_buffer_minutes": 5,
+    "max_route_duration_minutes": null,
+    "max_clients_per_driver": null,
+    "solver_timeout_seconds": 300,
+    "enable_partial_reoptimization": true
+  },
+  "system": {
+    "raw_file_retention_days": 3,
+    "max_drivers": 50,
+    "max_clients_per_day": 500,
+    "scheduling_timeout_minutes": 10,
+    "encrypt_data_at_rest": true,
+    "require_authentication": true,
+    "data_directory": "data",
+    "drivers_file": "drivers.json",
+    "schedules_directory": "schedules",
+    "cache_directory": "cache"
+  }
+}

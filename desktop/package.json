@@ -1,0 +1,50 @@
+{
+  "name": "driver-scheduling-desktop",
+  "version": "0.1.0",
+  "description": "Driver Scheduling System - Desktop Application",
+  "main": "main.js",
+  "scripts": {
+    "driver-scheduling": "electron .",
+    "dev": "webpack serve --mode development",
+    "dev:electron": "electron .",
+    "build": "electron-builder",
+    "build:win": "electron-builder --win",
+    "build:mac": "electron-builder --mac",
+    "build:linux": "electron-builder --linux",
+    "start": "electron .",
+    "build:react": "webpack --mode production",
+    "watch:react": "webpack --mode development --watch"
+  },
+  "keywords": [
+    "driver",
+    "scheduling",
+    "desktop",
+    "electron"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "css-loader": "^6.8.1",
+    "electron": "^39.2.4",
+    "electron-builder": "^26.0.12",
+    "eslint": "^8.57.0",
+    "html-webpack-plugin": "^5.5.3",
+    "style-loader": "^3.3.3",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.3.3",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.0"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-router-dom": "^6.21.0",
+    "date-fns": "^3.0.0"
+  }
+}
+

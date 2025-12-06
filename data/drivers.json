@@ -1,0 +1,205 @@
+[
+  {
+    "driver_id": "GC35",
+    "name": "Fitsum G.",
+    "home_address": {
+      "street_number": "450",
+      "street": "S. Nome Way",
+      "city": "Aurora",
+      "state": null,
+      "zip_code": null,
+      "full_address": null,
+      "latitude": null,
+      "longitude": null
+    },
+    "phone": null,
+    "vehicle_type": "Passenger",
+    "capacity": 0,
+    "active": true,
+    "service_days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "daily_start_time": "04:30:00",
+    "daily_end_time": "15:00:00",
+    "max_daily_distance": null,
+    "max_daily_duration": null
+  },
+  {
+    "driver_id": "GC34",
+    "name": "Gebrehiwot ",
+    "home_address": {
+      "street_number": " 5219",
+      "street": "W. 16th Street",
+      "city": "Greeley",
+      "state": null,
+      "zip_code": null,
+      "full_address": null,
+      "latitude": null,
+      "longitude": null
+    },
+    "phone": null,
+    "vehicle_type": "SUV",
+    "capacity": 4,
+    "active": true,
+    "service_days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "daily_start_time": "05:01:00",
+    "daily_end_time": "22:01:00",
+    "max_daily_distance": null,
+    "max_daily_duration": null
+  },
+  {
+    "driver_id": "GC31",
+    "name": "Lidia",
+    "home_address": {
+      "street_number": "20940",
+      "street": "E. 42nd Avenue",
+      "city": "Denver",
+      "state": null,
+      "zip_code": null,
+      "full_address": null,
+      "latitude": null,
+      "longitude": null
+    },
+    "phone": null,
+    "vehicle_type": "SUV",
+    "capacity": 4,
+    "active": true,
+    "service_days": [
+      "Tuesday",
+      "Monday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "daily_start_time": "06:00:00",
+    "daily_end_time": "18:00:00",
+    "max_daily_distance": null,
+    "max_daily_duration": null
+  },
+  {
+    "driver_id": "GC37",
+    "name": "Naem S",
+    "home_address": {
+      "street_number": "1809",
+      "street": "Coronado Parkway",
+      "city": "Thornton",
+      "state": null,
+      "zip_code": null,
+      "full_address": null,
+      "latitude": null,
+      "longitude": null
+    },
+    "phone": null,
+    "vehicle_type": "Passenger",
+    "capacity": 1,
+    "active": true,
+    "service_days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "daily_start_time": "05:00:00",
+    "daily_end_time": "20:00:00",
+    "max_daily_distance": null,
+    "max_daily_duration": null
+  },
+  {
+    "driver_id": "GC36",
+    "name": "Yared G.",
+    "home_address": {
+      "street_number": "20223",
+      "street": "E. 47th Ave",
+      "city": "Denver",
+      "state": null,
+      "zip_code": null,
+      "full_address": null,
+      "latitude": null,
+      "longitude": null
+    },
+    "phone": null,
+    "vehicle_type": "Passenger",
+    "capacity": 3,
+    "active": true,
+    "service_days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "daily_start_time": "05:00:00",
+    "daily_end_time": "22:00:00",
+    "max_daily_distance": null,
+    "max_daily_duration": null
+  },
+  {
+    "driver_id": "GC11",
+    "name": "Seble T",
+    "home_address": {
+      "street_number": "5954",
+      "street": "S. Helena St.",
+      "city": "Centennial",
+      "state": null,
+      "zip_code": null,
+      "full_address": "5954, S. Helena St., Centennial",
+      "latitude": null,
+      "longitude": null
+    },
+    "phone": null,
+    "vehicle_type": "Van",
+    "capacity": 5,
+    "active": false,
+    "service_days": [
+      "Monday",
+      "Wednesday",
+      "Tuesday",
+      "Thursday",
+      "Friday"
+    ],
+    "daily_start_time": "05:20:00",
+    "daily_end_time": "20:30:00",
+    "max_daily_distance": null,
+    "max_daily_duration": null
+  },
+  {
+    "driver_id": "GC32",
+    "name": "Tatek G",
+    "home_address": {
+      "street_number": "5954",
+      "street": "S. Helena St",
+      "city": "Centennial",
+      "state": null,
+      "zip_code": null,
+      "full_address": "5954, S. Helena St, Centennial",
+      "latitude": null,
+      "longitude": null
+    },
+    "phone": null,
+    "vehicle_type": "SUV",
+    "capacity": 5,
+    "active": false,
+    "service_days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "daily_start_time": "06:22:00",
+    "daily_end_time": "18:22:00",
+    "max_daily_distance": null,
+    "max_daily_duration": null
+  }
+]
