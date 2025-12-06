@@ -3,9 +3,10 @@ nixPkgs = ["nodejs-18_x", "python312"]
 
 [phases.install]
 cmds = [
+  "pip install --upgrade pip",
+  "pip install -r requirements.txt",
   "cd desktop && npm install",
-  "cd desktop && npm run build:react",
-  "pip install -r api/requirements.txt"
+  "cd desktop && npm run build:react"
 ]
 
 [phases.build]
